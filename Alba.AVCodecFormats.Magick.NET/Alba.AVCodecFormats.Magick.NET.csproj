@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>-->
+  </PropertyGroup>
+
+  <ItemGroup Label="References">
+    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
+    <ProjectReference Include="$(SolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Label="Packages">
+    <PackageReference Include="FFmpeg.AutoGen" Version="7.1.1" />
+    <PackageReference Include="Magick.NET.Core" Version="14.0.0" />
+  </ItemGroup>
+
+</Project>

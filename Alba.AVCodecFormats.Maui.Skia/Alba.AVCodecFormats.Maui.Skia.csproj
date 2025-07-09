@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <RootNamespace>Alba.AVCodecFormats.Maui.Graphics.Skia</RootNamespace>
+    <!--<UseMaui>true</UseMaui>-->
+  </PropertyGroup>
+
+  <ItemGroup Label="References">
+    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
+    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats.SkiaSharp\Alba.AVCodecFormats.SkiaSharp.csproj" />
+    <ProjectReference Include="$(SolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup Label="Packages">
+    <!-- Earliest with support for Skia 3 -->
+    <PackageReference Include="Microsoft.Maui.Graphics.Skia" Version="10.0.0-preview.3.25208.1" />
+  </ItemGroup>
+
+</Project>

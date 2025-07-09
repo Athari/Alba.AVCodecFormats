@@ -1,0 +1,28 @@
+<Project>
+  <PropertyGroup Label="Platform">
+    <LangVersion>13.0</LangVersion>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Build">
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DefineConstants Condition="'$(Configuration)' == 'Debug'">JETBRAINS_ANNOTATIONS</DefineConstants>
+    <NoWarn>$(NoWarn)</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Avalonia">
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Artifacts">
+    <UseArtifactsOutput>true</UseArtifactsOutput>
+    <SolutionRootPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</SolutionRootPath>
+    <ArtifactsPath>$(SolutionRootPath)Artifacts/</ArtifactsPath>
+    <!--<BaseOutputPath>$(ArtifactsPath)bin/$(MSBuildProjectName)/</BaseOutputPath>-->
+    <BaseOutputPath>$(ArtifactsPath)</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(ArtifactsPath)Obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.Avalonia", "Alba.AVCodecFormats.Avalonia\Alba.AVCodecFormats.Avalonia.csproj", "{7A38D8BF-749E-44FB-9822-8C8212788A79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Alba.AVCodecFormats.sln.DotSettings = Alba.AVCodecFormats.sln.DotSettings
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFMediaToolkit", "FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj", "{170EE67B-89D4-15A2-F3A1-F14E40B555F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats", "Alba.AVCodecFormats\Alba.AVCodecFormats.csproj", "{F1A4648B-289F-10FA-4C9A-E318A1DA3B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.Windows", "Alba.AVCodecFormats.Windows\Alba.AVCodecFormats.Windows.csproj", "{C840BEB1-016F-8ED9-ED3F-DFAFEF89E052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.Windows.Forms", "Alba.AVCodecFormats.Windows.Forms\Alba.AVCodecFormats.Windows.Forms.csproj", "{3F94E7DD-ACBC-4D2B-BD57-3C188E821EED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.Magick.NET", "Alba.AVCodecFormats.Magick.NET\Alba.AVCodecFormats.Magick.NET.csproj", "{468CCAD5-4B27-B2AF-3E6E-2C2F7C1D0144}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.SkiaSharp", "Alba.AVCodecFormats.SkiaSharp\Alba.AVCodecFormats.SkiaSharp.csproj", "{6A916A99-5DBC-ACA9-533E-046AADC2F7D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.Maui.Skia", "Alba.AVCodecFormats.Maui.Skia\Alba.AVCodecFormats.Maui.Skia.csproj", "{5463623F-833D-E589-BF30-7F724E48CB6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alba.AVCodecFormats.Maui.Win2D", "Alba.AVCodecFormats.Maui.Win2D\Alba.AVCodecFormats.Maui.Win2D.csproj", "{B0A0AB17-6C5E-5F23-A501-49C3C3FDC342}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A38D8BF-749E-44FB-9822-8C8212788A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A38D8BF-749E-44FB-9822-8C8212788A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A38D8BF-749E-44FB-9822-8C8212788A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A38D8BF-749E-44FB-9822-8C8212788A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170EE67B-89D4-15A2-F3A1-F14E40B555F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170EE67B-89D4-15A2-F3A1-F14E40B555F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170EE67B-89D4-15A2-F3A1-F14E40B555F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170EE67B-89D4-15A2-F3A1-F14E40B555F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A4648B-289F-10FA-4C9A-E318A1DA3B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A4648B-289F-10FA-4C9A-E318A1DA3B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A4648B-289F-10FA-4C9A-E318A1DA3B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A4648B-289F-10FA-4C9A-E318A1DA3B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C840BEB1-016F-8ED9-ED3F-DFAFEF89E052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C840BEB1-016F-8ED9-ED3F-DFAFEF89E052}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C840BEB1-016F-8ED9-ED3F-DFAFEF89E052}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C840BEB1-016F-8ED9-ED3F-DFAFEF89E052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F94E7DD-ACBC-4D2B-BD57-3C188E821EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F94E7DD-ACBC-4D2B-BD57-3C188E821EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F94E7DD-ACBC-4D2B-BD57-3C188E821EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F94E7DD-ACBC-4D2B-BD57-3C188E821EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{468CCAD5-4B27-B2AF-3E6E-2C2F7C1D0144}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468CCAD5-4B27-B2AF-3E6E-2C2F7C1D0144}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468CCAD5-4B27-B2AF-3E6E-2C2F7C1D0144}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468CCAD5-4B27-B2AF-3E6E-2C2F7C1D0144}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A916A99-5DBC-ACA9-533E-046AADC2F7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A916A99-5DBC-ACA9-533E-046AADC2F7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A916A99-5DBC-ACA9-533E-046AADC2F7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A916A99-5DBC-ACA9-533E-046AADC2F7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5463623F-833D-E589-BF30-7F724E48CB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5463623F-833D-E589-BF30-7F724E48CB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5463623F-833D-E589-BF30-7F724E48CB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5463623F-833D-E589-BF30-7F724E48CB6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0A0AB17-6C5E-5F23-A501-49C3C3FDC342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0A0AB17-6C5E-5F23-A501-49C3C3FDC342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0A0AB17-6C5E-5F23-A501-49C3C3FDC342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0A0AB17-6C5E-5F23-A501-49C3C3FDC342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {15CDE2EF-92BC-4728-A2C0-468CB930CF4D}
+	EndGlobalSection
+EndGlobal

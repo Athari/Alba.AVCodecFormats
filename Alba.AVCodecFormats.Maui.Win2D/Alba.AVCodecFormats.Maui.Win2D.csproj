@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Build">
+    <RootNamespace>Alba.AVCodecFormats.Maui.Graphics.Win2D</RootNamespace>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Crap">
+    <DisableMauiImplicitPackageReferences>true</DisableMauiImplicitPackageReferences>
+    <CsWinRTAotOptimizerEnabled>false</CsWinRTAotOptimizerEnabled>
+    <!--<WebView2EnableCsWinRTProjection>false</WebView2EnableCsWinRTProjection>
+    <WebView2UseDispatchAdapter>true</WebView2UseDispatchAdapter>
+    <WebView2UseWinRT>false</WebView2UseWinRT>
+    <WebView2LoaderPreference>None</WebView2LoaderPreference>
+    <WebView2ProjectKind>managed</WebView2ProjectKind>-->
+  </PropertyGroup>
+
+  <ItemGroup Label="Crap">
+    <WebView2Crap Include="$(OutputPath)**\*webview2*;$(PublishDir)**\*webview2*" />
+  </ItemGroup>
+
+  <ItemGroup Label="References">
+    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
+    <ProjectReference Include="$(SolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
+    <!--<FrameworkReference Remove="Microsoft.Windows.SDK.NET.Ref.Windows" />-->
+  </ItemGroup>
+
+  <ItemGroup Label="Packages">
+    <PackageReference Include="FFmpeg.AutoGen" Version="7.1.1" />
+    <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.3.0" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Maui.Graphics" Version="10.0.0-preview.5.25306.5" />
+    <PackageReference Include="Microsoft.Web.WebView2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <Target Name="DisableAnalyzerCrap" BeforeTargets="CoreCompile">
+    <ItemGroup>
+      <Analyzer Remove="@(Analyzer)" Condition="'%(FileName)%(Extension)' == 'WinRT.SourceGenerator.dll'" />
+    </ItemGroup>
+  </Target>
+  <Target Name="RemoveWebView2Crap" AfterTargets="Build;Publish">
+    <Delete Files="@(WebView2Crap)" />
+  </Target>
+  <!--<Target Name="CleanWebView2" AfterTargets="Build">
+    <Delete Files="$(OutputPath)\**\WebView2Loader.dll"/>
+  </Target>-->
+
+</Project>
