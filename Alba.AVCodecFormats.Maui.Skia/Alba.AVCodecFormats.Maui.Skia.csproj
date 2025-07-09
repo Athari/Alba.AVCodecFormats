@@ -6,9 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup Label="References">
-    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
-    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats.SkiaSharp\Alba.AVCodecFormats.SkiaSharp.csproj" />
-    <ProjectReference Include="$(SolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
+    <ProjectReference Include="$(CurrentSolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
+    <ProjectReference Include="$(CurrentSolutionDir)Alba.AVCodecFormats.SkiaSharp\Alba.AVCodecFormats.SkiaSharp.csproj" />
+    <ProjectReference Include="$(CurrentSolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup Label="Packages">

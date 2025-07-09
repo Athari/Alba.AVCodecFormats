@@ -17,13 +17,9 @@
     <WebView2ProjectKind>managed</WebView2ProjectKind>-->
   </PropertyGroup>
 
-  <ItemGroup Label="Crap">
-    <WebView2Crap Include="$(OutputPath)**\*webview2*;$(PublishDir)**\*webview2*" />
-  </ItemGroup>
-
   <ItemGroup Label="References">
-    <ProjectReference Include="$(SolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
-    <ProjectReference Include="$(SolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
+    <ProjectReference Include="$(CurrentSolutionDir)Alba.AVCodecFormats\Alba.AVCodecFormats.csproj" />
+    <ProjectReference Include="$(CurrentSolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
     <!--<FrameworkReference Remove="Microsoft.Windows.SDK.NET.Ref.Windows" />-->
   </ItemGroup>
 
@@ -32,19 +28,24 @@
     <PackageReference Include="Microsoft.Graphics.Win2D" Version="1.3.0" />
     <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="3.0.0" />
     <PackageReference Include="Microsoft.Maui.Graphics" Version="10.0.0-preview.5.25306.5" />
-    <PackageReference Include="Microsoft.Web.WebView2" PrivateAssets="all" />
+    <!--<PackageReference Condition="'$(RemoveWebView2Runtime)' == 'true'" Remove="Microsoft.Web.WebView2" Version="1.0.2651.63" PrivateAssets="all" />-->
+    <!--<PackageReference Condition="'$(RemoveWebView2Runtime)' == 'true'" Remove="Microsoft.Web.WebView2" PrivateAssets="all" />-->
   </ItemGroup>
 
+  <!--Condition="'$(RemoveWebView2Runtime)' == 'true'"-->
   <Target Name="DisableAnalyzerCrap" BeforeTargets="CoreCompile">
     <ItemGroup>
       <Analyzer Remove="@(Analyzer)" Condition="'%(FileName)%(Extension)' == 'WinRT.SourceGenerator.dll'" />
     </ItemGroup>
   </Target>
-  <Target Name="RemoveWebView2Crap" AfterTargets="Build;Publish">
+  <Target Name="RemoveWebView2Crap" AfterTargets="Build;Publish" Condition="'$(RemoveWebView2Runtime)' == 'true'">
+    <ItemGroup>
+      <WebView2Crap Include="$(OutputPath)**\*webview2*;$(PublishDir)**\*webview2*" />
+    </ItemGroup>
+    <Message Importance="High" Text="Removing WebView2 crap: @(WebView2Crap)" />
     <Delete Files="@(WebView2Crap)" />
+    <Exec Command="pwsh -NoLogo -NoProfile -Command &quot;&amp;'$(CurrentSolutionDir)Build\RemoveEmptyDirs.ps1' -DirPath '$(OutputPath)'&quot;" />
+    <Exec Command="pwsh -NoLogo -NoProfile -Command &quot;&amp;'$(CurrentSolutionDir)Build\RemoveEmptyDirs.ps1' -DirPath '$(PublishDir)'&quot;" />
   </Target>
-  <!--<Target Name="CleanWebView2" AfterTargets="Build">
-    <Delete Files="$(OutputPath)\**\WebView2Loader.dll"/>
-  </Target>-->
 
 </Project>

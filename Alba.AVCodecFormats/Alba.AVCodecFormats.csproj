@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup Label="References">
-    <ProjectReference Include="$(SolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
+    <ProjectReference Include="$(CurrentSolutionDir)FFMediaToolkit\FFMediaToolkit\FFMediaToolkit.csproj" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup Label="Packages">

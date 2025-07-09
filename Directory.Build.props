@@ -1,4 +1,5 @@
 <Project>
+
   <PropertyGroup Label="Platform">
     <LangVersion>13.0</LangVersion>
     <TargetFramework>net8.0</TargetFramework>
@@ -6,6 +7,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Build">
+    <RemoveWebView2Runtime Condition="'$(RemoveWebView2Runtime)' == ''">true</RemoveWebView2Runtime>
     <ImplicitUsings>enable</ImplicitUsings>
     <DefineConstants Condition="'$(Configuration)' == 'Debug'">JETBRAINS_ANNOTATIONS</DefineConstants>
     <NoWarn>$(NoWarn)</NoWarn>
@@ -17,12 +19,15 @@
 
   <PropertyGroup Label="Artifacts">
     <UseArtifactsOutput>true</UseArtifactsOutput>
-    <SolutionRootPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</SolutionRootPath>
-    <ArtifactsPath>$(SolutionRootPath)Artifacts/</ArtifactsPath>
+    <CurrentSolutionDir>$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'Alba.AVCodecFormats.sln'))\</CurrentSolutionDir>
+    <SolutionDir Condition="$(SolutionDir) == '' or $(SolutionDir) == '*Undefined*'">$(CurrentSolutionDir)</SolutionDir>
+    <!--<SolutionRootPath>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)'))</SolutionRootPath>-->
+    <ArtifactsPath>$(SolutionDir)Artifacts/</ArtifactsPath>
     <!--<BaseOutputPath>$(ArtifactsPath)bin/$(MSBuildProjectName)/</BaseOutputPath>-->
     <BaseOutputPath>$(ArtifactsPath)</BaseOutputPath>
     <BaseIntermediateOutputPath>$(ArtifactsPath)Obj/$(MSBuildProjectName)/</BaseIntermediateOutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
   </PropertyGroup>
+
 </Project>
