@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using FFMediaToolkit.Graphics;
+using FFmpeg.AutoGen;
 using ImageMagick;
 
 namespace Alba.AVCodecFormats.Magick.NET.Internal;
@@ -9,6 +10,9 @@ internal static class Exts
     public static ImagePixelFormat ToImagePixelFormat(this StorageType @this, string mapping) =>
         (@this, mapping) switch {
             (StorageType.Short, "RGBA") => ImagePixelFormat.Rgba64,
+            (StorageType.Short, "BGRA") => (ImagePixelFormat)AVPixelFormat.AV_PIX_FMT_BGRA64LE,
+            (StorageType.Short, "RGB") => (ImagePixelFormat)AVPixelFormat.AV_PIX_FMT_RGB48LE,
+            (StorageType.Short, "BGR") => (ImagePixelFormat)AVPixelFormat.AV_PIX_FMT_BGR48LE,
             (StorageType.Short, "R") => ImagePixelFormat.Gray16,
             (StorageType.Char, "RGBA") => ImagePixelFormat.Rgba32,
             (StorageType.Char, "ARGB") => ImagePixelFormat.Argb32,
