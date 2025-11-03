@@ -1,9 +1,8 @@
 ﻿using System.Runtime.InteropServices;
 using FFMediaToolkit.Graphics;
-using FFmpeg.AutoGen;
 using ImageMagick;
 
-namespace Alba.AVCodecFormats.Magick.NET.Internal;
+namespace Alba.AVCodecFormats.ImageMagick.Internal;
 
 internal static class Exts
 {

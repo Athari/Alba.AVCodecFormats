@@ -1,7 +1,7 @@
 ﻿using FFMediaToolkit.Decoding;
 using JetBrains.Annotations;
 
-namespace Alba.AVCodecFormats.Magick.NET;
+namespace Alba.AVCodecFormats.ImageMagick;
 
 /// <summary>Represents information about the audio stream.</summary>
 [PublicAPI]

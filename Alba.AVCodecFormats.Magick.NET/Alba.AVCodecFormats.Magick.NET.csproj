@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup Label="Build">
+    <RootNamespace>Alba.AVCodecFormats.ImageMagick</RootNamespace>
     <!--<AllowUnsafeBlocks>true</AllowUnsafeBlocks>-->
   </PropertyGroup>
 

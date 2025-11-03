@@ -1,7 +1,7 @@
 ﻿using FFMediaToolkit.Decoding;
 using JetBrains.Annotations;
 
-namespace Alba.AVCodecFormats.Magick.NET;
+namespace Alba.AVCodecFormats.ImageMagick;
 
 /// <summary>Contains information about the media container.</summary>
 [PublicAPI]

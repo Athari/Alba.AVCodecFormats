@@ -1,10 +1,10 @@
-﻿using Alba.AVCodecFormats.Internal;
-using Alba.AVCodecFormats.Magick.NET.Internal;
+﻿using Alba.AVCodecFormats.ImageMagick.Internal;
+using Alba.AVCodecFormats.Internal;
 using ImageMagick;
 using ImageMagick.Factories;
 using JetBrains.Annotations;
 
-namespace Alba.AVCodecFormats.Magick.NET;
+namespace Alba.AVCodecFormats.ImageMagick;
 
 [PublicAPI]
 public sealed class VideoSequence<TQ> : IDisposable

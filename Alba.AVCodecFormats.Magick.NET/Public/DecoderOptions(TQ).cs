@@ -1,6 +1,6 @@
 ﻿using ImageMagick;
 
-namespace Alba.AVCodecFormats.Magick.NET;
+namespace Alba.AVCodecFormats.ImageMagick;
 
 /// <summary>AV decoder options for generating an image out of a video/audio stream.</summary>
 public sealed class DecoderOptions<TQ> : DecoderOptionsBase<IMagickImage<TQ>>

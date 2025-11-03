@@ -3,7 +3,7 @@ using Alba.AVCodecFormats.Internal;
 using ImageMagick;
 using ImageMagick.Factories;
 
-namespace Alba.AVCodecFormats.Magick.NET.Internal;
+namespace Alba.AVCodecFormats.ImageMagick.Internal;
 
 internal sealed class MediaDecoder<TQ>(IMagickFactory<TQ> factory, DecoderOptions<TQ> options) : MediaDecoderBase(options)
     where TQ : struct, IConvertible
